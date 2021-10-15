@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <!--  Menampilkan gambar  -->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/icon1"/>
+
+    <!--  Membuat text Implicit Intent  -->
+    <TextView
+        android:id="@+id/tvImplicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Implicit Intent"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!--  Membuat edit text untuk link  -->
+    <EditText
+        android:id="@+id/etLink"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvImplicit"
+        android:layout_marginTop="20dp"
+        android:justificationMode="inter_word"
+        android:hint="http://"
+        android:textSize="18sp" />
+
+    <!--  Membuat button visit  -->
+    <Button
+        android:id="@+id/btnVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visit"
+        android:layout_toRightOf="@id/etLink"
+        android:layout_below="@+id/tvImplicit"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:onClick="act_visit"/>
+
+    <!--  Membuat text Explicit Intent  -->
+    <TextView
+        android:id="@+id/tvExplicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/etLink"
+        android:gravity="center"
+        android:text="Explicit Intent"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!--  Membuat edit text untuk nim  -->
+    <EditText
+        android:id="@+id/etNim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvExplicit"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:justificationMode="inter_word"
+        android:hint="NIM"
+        android:textSize="18sp" />
+
+    <!--  Membuat edit text untuk nama  -->
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNim"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:justificationMode="inter_word"
+        android:hint="Nama"
+        android:textSize="18sp" />
+    <!--  Membuat edit text untuk nama  -->
+    <EditText
+        android:id="@+id/etAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNama"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:justificationMode="inter_word"
+        android:hint="Alamat"
+        android:textSize="18sp" />
+
+    <!--  Membuat button visit  -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etAlamat"
+        android:layout_marginTop="19dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="act_submit"
+        android:text="Submit"
+        android:textAllCaps="false" />
+</RelativeLayout>
